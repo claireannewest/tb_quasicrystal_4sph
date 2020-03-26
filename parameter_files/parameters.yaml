@@ -1,0 +1,12 @@
+precision: 14
+
+inputs: 'parameter_files/inputs_copy.txt'
+
+n_b: 1.
+
+constants:
+  c: 2.998E+10 #cm/s
+  hbar_eVs: 6.58212E-16 #eV*s
+  hbar_cgs: 1.0545716E-27 
+  e: 4.80326E-10 #statC
+
