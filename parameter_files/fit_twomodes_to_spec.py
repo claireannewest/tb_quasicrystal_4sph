@@ -25,13 +25,13 @@ inputs = np.loadtxt(str('../')+param['inputs'],skiprows=1)
 
 def loadData(which):
     if which == 'Dl':
-        data_long = np.loadtxt('/Users/clairewest/werk/research/philips_square/simulations/eels/Spectrum_monomer_long',skiprows=1)
+        data_long = np.loadtxt('/Users/clairewest/werk/research/quasicrystal/my_sims/monomer/Spectrum_2DS_long',skiprows=1)
         #data_long = np.loadtxt('/Users/clairewest/werk/research/philips_square/simulations/eels/elongate/Spectrum_elongmono_long',skiprows=1)
         w_long = data_long[:,1] #eV
         effic_long = data_long[:,2]
         allData_long = np.column_stack([w_long, effic_long])
         allData_sortlong = allData_long[allData_long[:,0].argsort()[::-1]]
-        idx = np.where(allData_sortlong[:,0] > 1.8)     #1.9
+        idx = np.where(allData_sortlong[:,0] > 1.4)     #1.9
         allData_sortlong = np.delete(allData_sortlong, idx, axis=0)
         idx = np.where(allData_sortlong[:,0] <= 0.)  
         allData_sortlong = np.delete(allData_sortlong, idx, axis=0)
